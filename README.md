@@ -2,19 +2,24 @@
 
 Space Labels is a macOS utility designed for MacBook users with a hardware notch. It seamlessly extends your notch to display the name of your current Desktop (Space) and provides an interactive carousel to manage your workflow.
 
-## Features
+---
 
-- **Notch Label Extension**: Displays the current desktop name to the **Left**, **Right**, or **Bottom** of the physical notch.
-- **Dynamic Pill UI**: The black background of the notch physically grows and shrinks to fit your custom space name.
-- **Interactive Carousel**: Hover over the physical notch area to reveal a horizontal HUD showing all active desktops with real-time snapshots.
-- **Instant Desktop Switching**: Click any preview image in the carousel to instantly jump to that desktop.
-- **Custom Naming**: Click the name under any preview in the carousel to rename your desktop.
-- **Privacy First Snapshots**: Snapshots are only captured when you visit a desktop and are kept strictly in-memory.
-- **Minimal Footprint**: Operates as a background accessory app with a lean menu bar icon for preferences.
+## 🛠 Installation & "First Run" Fix
+
+Because this app is independently developed and not notarized by Apple, you will see a security warning on the first launch. Follow these steps to install:
+
+1.  **Download and Open**: Open the `SpaceLabels.dmg` file.
+2.  **Install**: Drag the `SpaceLabels` icon into the `Applications` folder.
+3.  **Bypass Security Warning**: 
+    *   Navigate to your `/Applications` folder.
+    *   **Right-Click** (or Control-Click) the `SpaceLabels` app.
+    *   Select **Open** from the menu.
+    *   A dialog will appear saying "Apple cannot check it for malicious software." Click **Open** again.
+    *   *Note: You only need to do this once.*
 
 ---
 
-## Getting Space Switching to Work
+## 🛰 Getting Space Switching to Work
 
 Because macOS protects desktop switching behind system shortcuts, you must enable them for the "Click to Switch" feature to function:
 
@@ -27,7 +32,7 @@ Because macOS protects desktop switching behind system shortcuts, you must enabl
 
 ---
 
-## Usage Guide
+## 📖 Usage Guide
 
 ### Expanding & Collapsing the Notch
 - **Expand**: If the notch is collapsed (standard size), **Click the central notch area** to reveal your desktop name label.

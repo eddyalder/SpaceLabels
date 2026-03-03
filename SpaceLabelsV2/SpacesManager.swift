@@ -70,11 +70,9 @@ class SpacesManager: ObservableObject {
             self.activeSpaceID = currentID
             self.allSpaces = newSpaces
             
-            // Clean up snapshots for deleted spaces
             let activeIDs = Set(newSpaces.map { $0.id })
             self.snapshots = self.snapshots.filter { activeIDs.contains($0.key) }
             
-            // Only capture if missing
             if !currentID.isEmpty && self.snapshots[currentID] == nil {
                 self.captureSnapshot(for: currentID)
             }
@@ -99,7 +97,7 @@ class SpacesManager: ObservableObject {
                     self.snapshots[spaceID] = NSImage(cgImage: image, size: NSSize(width: 400, height: 250))
                 }
             } catch {
-                // Silently fail snapshot
+                // Silently fail
             }
         }
     }
@@ -114,7 +112,6 @@ class SpacesManager: ObservableObject {
         }
         
         if targetIndex != -1 && targetIndex <= 10 {
-            // Standard macOS Shortcut: Ctrl + (Number 1-9, 0)
             let keycodes: [Int: CGKeyCode] = [
                 1: 18, 2: 19, 3: 20, 4: 21, 5: 23, 
                 6: 22, 7: 26, 8: 28, 9: 25, 10: 29

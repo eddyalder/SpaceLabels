@@ -35,6 +35,7 @@ struct NotchView: View {
     
     let notchWidth: CGFloat = 210
     let notchHeight: CGFloat = 32
+    let bottomLabelHeight: CGFloat = 24
     
     var body: some View {
         Group {
@@ -47,13 +48,11 @@ struct NotchView: View {
                     VStack(spacing: 0) {
                         hardwareNotchFiller
                             .background(Color.black)
-                            // Top part of bottom extension should match notch bottom rounding
                             .clipShape(RoundedRectangle(cornerRadius: 14))
                         
                         labelContainer
                             .background(Color.black)
-                            // Square top corners, rounded bottom corners
-                            .clipShape(BottomRoundedRectangle(radius: 14))
+                            .clipShape(BottomRoundedRectangle(radius: 12))
                     }
                 } else {
                     HStack(spacing: 0) {
@@ -95,8 +94,9 @@ struct NotchView: View {
         let string = NSAttributedString(string: spacesManager.activeSpaceName, attributes: attributes)
         let textSize = string.size()
         
-        let labelPadding: CGFloat = 32
-        let labelWidth: CGFloat = textSize.width + labelPadding
+        // Tighter padding: 8pt inner, 12pt outer
+        let horizontalPadding: CGFloat = 20
+        let labelWidth: CGFloat = textSize.width + horizontalPadding
         
         var totalWidth = notchWidth
         var totalHeight = notchHeight
@@ -104,7 +104,7 @@ struct NotchView: View {
         
         if !settings.isCollapsed {
             if settings.position == .bottom {
-                totalHeight = notchHeight * 2
+                totalHeight = notchHeight + bottomLabelHeight
             } else {
                 totalWidth = notchWidth + labelWidth
                 if settings.position == .left {
@@ -137,14 +137,16 @@ struct NotchView: View {
     }
     
     var labelContainer: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 0) {
             Text(spacesManager.activeSpaceName)
                 .font(.system(size: 14, weight: .bold))
                 .foregroundColor(.white)
                 .fixedSize()
         }
-        .padding(.horizontal, 16)
-        .frame(height: notchHeight)
+        .padding(.leading, settings.position == .right ? 8 : 12)
+        .padding(.trailing, settings.position == .left ? 8 : 12)
+        .padding(.horizontal, settings.position == .bottom ? 12 : 0)
+        .frame(height: settings.position == .bottom ? bottomLabelHeight : notchHeight)
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation(.spring()) {

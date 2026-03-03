@@ -1,6 +1,6 @@
-# Space Labels V2 🚀
+# Space Labels 🚀
 
-Space Labels V2 is a macOS utility designed for MacBook users with a hardware notch. It seamlessly extends your notch to display the name of your current Desktop (Space) and provides an interactive carousel to manage your workflow.
+Space Labels is a macOS utility designed for MacBook users with a hardware notch. It seamlessly extends your notch to display the name of your current Desktop (Space) and provides an interactive carousel to manage your workflow.
 
 ## Features
 
@@ -23,7 +23,7 @@ Because macOS protects desktop switching behind system shortcuts, you must enabl
 3. Select **Mission Control** from the left sidebar.
 4. Locate the list of **"Switch to Desktop 1"**, **"Switch to Desktop 2"**, etc.
 5. **Enable the checkboxes** for the desktops you use (e.g., Desktops 1-9).
-   - *Note: Space Labels V2 simulates the `Control + [Digit]` shortcut to navigate. Ensure these shortcuts are assigned to those keys.*
+   - *Note: Space Labels simulates the `Control + [Digit]` shortcut to navigate. Ensure these shortcuts are assigned to those keys.*
 
 ---
 

@@ -2,6 +2,18 @@
 
 Space Labels is a macOS utility designed for MacBook users with a hardware notch. It seamlessly extends your notch to display the name of your current Desktop (Space) and provides an interactive carousel to manage your workflow.
 
+<img width="584" height="263" alt="image" src="https://github.com/user-attachments/assets/db36e761-5a05-437f-9e9e-8df10a930b59" />
+
+## Features
+
+- **Notch Label Extension**: Displays the current desktop name to the **Left**, **Right**, or **Bottom** of the physical notch.
+- **Dynamic Pill UI**: The black background of the notch physically grows and shrinks to fit your custom space name.
+- **Interactive Carousel**: Hover over the physical notch area to reveal a horizontal HUD showing all active desktops with real-time snapshots.
+- **Instant Desktop Switching**: Click any preview image in the carousel to instantly jump to that desktop.
+- **Custom Naming**: Click the name under any preview in the carousel to rename your desktop.
+- **Privacy First Snapshots**: Snapshots are only captured when you visit a desktop and are kept strictly in-memory.
+- **Minimal Footprint**: Operates as a background accessory app with a lean menu bar icon for preferences.
+
 ---
 
 ## 🛠 Installation & "First Run" Fix

@@ -2,6 +2,8 @@
 
 Space Labels V2 is a macOS utility designed for MacBook users with a hardware notch. It seamlessly extends your notch to display the name of your current Desktop (Space) and provides an interactive carousel to manage your workflow.
 
+<img width="259" height="38" alt="image" src="https://github.com/user-attachments/assets/207032e8-d5ab-44f2-b667-6319673c6467" />
+
 ## Features
 
 - **Notch Label Extension**: Displays the current desktop name to the **Left**, **Right**, or **Bottom** of the physical notch.

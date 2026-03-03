@@ -6,15 +6,18 @@ Space Labels is a macOS utility designed for MacBook users with a hardware notch
 
 ## 🛠 Installation & "First Run" Fix
 
-Because this app is independently developed and not notarized by Apple, you will see a security warning on the first launch. Follow these steps to install:
+Because this app is independently developed and not notarized by Apple, macOS will prevent it from running by default when downloaded from the web. Follow these steps to install:
 
 1.  **Download and Open**: Open the `SpaceLabels.dmg` file.
 2.  **Install**: Drag the `SpaceLabels` icon into the `Applications` folder.
 3.  **Bypass Security Warning**: 
-    *   Navigate to your `/Applications` folder.
-    *   **Right-Click** (or Control-Click) the `SpaceLabels` app.
-    *   Select **Open** from the menu.
-    *   A dialog will appear saying "Apple cannot check it for malicious software." Click **Open** again.
+    *   Try to open the app from your `/Applications` folder. You will see a warning that it cannot be verified.
+    *   Open **System Settings** on your Mac.
+    *   Navigate to **Privacy & Security**.
+    *   Scroll down to the **Security** section.
+    *   You will see a message saying "`SpaceLabels` was blocked from use because it is not from an identified developer." 
+    *   Click the **"Open Anyway"** button.
+    *   Authenticate with your password/TouchID, and then click **Open** one last time.
     *   *Note: You only need to do this once.*
 
 ---
